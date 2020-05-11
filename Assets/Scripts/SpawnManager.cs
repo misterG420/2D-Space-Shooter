@@ -1,22 +1,23 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class SpawnManager : MonoBehaviour
 {
 	[SerializeField]
 	private GameObject enemyPrefab;
+
 	[SerializeField]
 	private GameObject enemyContainer;
 
 	private bool stopSpawning = false;
+
 	[SerializeField]
-	private GameObject[] powerups;
+	private PowerupProbabilityClass[] powerups;
 
-	private void Start()
-	{
+	[SerializeField]
+	//private GameObject ammoPickup;
 
-	}
+
 
 	public void StartSpawning()
 	{
@@ -37,6 +38,7 @@ public class SpawnManager : MonoBehaviour
 		}
 	}
 
+
 	IEnumerator SpawnPowerupRoutine()
 	{
 		yield return new WaitForSeconds(2);
@@ -44,14 +46,37 @@ public class SpawnManager : MonoBehaviour
 		while (stopSpawning == false)
 		{
 			Vector3 posToSpawn = new Vector3(Random.Range(-8f, 8f), 7f, 0f);
-			int randomPowerup = Random.Range(0, 3);
-			Instantiate(powerups[randomPowerup], posToSpawn, Quaternion.identity);
-			yield return new WaitForSeconds(Random.Range(5, 13));
+			int i = Random.Range(0, 100);
+
+
+		for (int j = 0; j < powerups.Length; j++)
+		{
+			if (i >= powerups[j].minProbabilityRange && i <= powerups[j].maxProbabilityRange)
+			{
+				Debug.Log(j);
+				Instantiate(powerups[j].spawnedPowerups, posToSpawn, Quaternion.identity);
+				yield return new WaitForSeconds(Random.Range(2, 4));
+				break;
+
+			}
+			yield return new WaitForSeconds(Random.Range(2, 4));
 		}
+		}
+
 	}
+
 
 	public void OnPlayerDeath()
 	{
 		stopSpawning = true;
 	}
+}
+
+[System.Serializable]
+public class PowerupProbabilityClass
+{
+	public GameObject spawnedPowerups;
+	public int minProbabilityRange = 0;
+	public int maxProbabilityRange = 100;
+
 }

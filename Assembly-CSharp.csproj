@@ -73,6 +73,7 @@
     <Compile Include="Assets\Scripts\Player.cs" />
     <Compile Include="Assets\Scripts\Powerup.cs" />
     <Compile Include="Assets\Scripts\SpawnManager.cs" />
+    <Compile Include="Assets\Scripts\SpawnManager2.cs" />
     <Compile Include="Assets\Scripts\UIManager.cs" />
     <None Include="Assets\GameDevHQ\FileBase\Projects\Tutorials\Starter_Files\2D_Galaxy_Assets\Materials\Shaders\Galaxy.shader" />
     <Reference Include="Unity.Timeline.Editor">
@@ -93,20 +94,20 @@
     <Reference Include="Unity.CollabProxy.Editor">
       <HintPath>D:/Data/Unity Projekte/SpaceShooter/Space Shooter/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.Postprocessing.Editor">
+      <HintPath>D:/Data/Unity Projekte/SpaceShooter/Space Shooter/Library/ScriptAssemblies/Unity.Postprocessing.Editor.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.Rider.Editor">
       <HintPath>D:/Data/Unity Projekte/SpaceShooter/Space Shooter/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Postprocessing.Runtime">
+      <HintPath>D:/Data/Unity Projekte/SpaceShooter/Space Shooter/Library/ScriptAssemblies/Unity.Postprocessing.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
       <HintPath>D:/Data/Unity Projekte/SpaceShooter/Space Shooter/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.UI">
       <HintPath>D:/Data/Unity Projekte/SpaceShooter/Space Shooter/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Postprocessing.Editor">
-      <HintPath>D:/Data/Unity Projekte/SpaceShooter/Space Shooter/Library/ScriptAssemblies/Unity.Postprocessing.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Postprocessing.Runtime">
-      <HintPath>D:/Data/Unity Projekte/SpaceShooter/Space Shooter/Library/ScriptAssemblies/Unity.Postprocessing.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.3.0f6/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>

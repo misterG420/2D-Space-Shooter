@@ -10,6 +10,10 @@ public class Powerup : MonoBehaviour
     //0 trippleShot;
     //1 speed;
     //2 shields;
+    //3 health;
+    //4 megaUltraSuperBlaster;
+    //5 ammoPickup;
+
     [SerializeField]
     private int powerupID;
 
@@ -50,6 +54,19 @@ public class Powerup : MonoBehaviour
                     case 2:
                         player.ShieldPowerupActive(); Destroy(this.gameObject);
                         break;
+
+                    case 3:
+                        player.HealthPowerupActive(); Destroy(this.gameObject);
+                        break;
+                    
+                    case 4:
+                        player.MegaBlaterActive(); Destroy(this.gameObject);
+                        break;
+
+                    case 5:
+                        player.AmmoPickupActive(); Destroy(this.gameObject);
+                        break;
+
                 }
             }
 
